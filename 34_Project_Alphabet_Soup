@@ -1,0 +1,216 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/crazygovind/AI-Foundation-Whitehat-Jr/blob/master/34_Project_Alphabet_Soup\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "YZnBY81YDCCr"
+      },
+      "source": [
+        "### Instructions"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "fIKnY8occu37"
+      },
+      "source": [
+        "#### Goal of the Project\n",
+        "\n",
+        "This project is designed for you to practice and solve the activities that are based on the concepts covered in the following lessons:\n",
+        "\n",
+        "1. Python Lists\n",
+        "\n",
+        "2. String Operations\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "bEvcNW2V96nV"
+      },
+      "source": [
+        "---"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "H0P9F3DUf8x2"
+      },
+      "source": [
+        "### Activities\n",
+        "\n",
+        "\n",
+        "  "
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "BVT9G_baB1aq"
+      },
+      "source": [
+        "#### Activity 1: Name Shuffling\n",
+        "\n",
+        "Given a `name` (First name and Last name) of person as a string, write a program to swap the first and last name.\n",
+        "\n",
+        "**Constraint**:\n",
+        "\n",
+        "- There will be exactly one space between the first and last name.\n",
+        "\n",
+        "**Examples**\n",
+        "```\n",
+        "1. Donald Trump ➞ Trump Donald\n",
+        "\n",
+        "2. Rosie O'Donnell ➞ O'Donnell Rosie\n",
+        "\n",
+        "3. Seymour Butts ➞ Butts Seymour\n",
+        "```\n",
+        "\n",
+        "**Hint**: Use `split()` function and list indexing.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "0pIGxKG9B3mb",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "c49fbdbb-d240-4c7a-ea46-d31233211d09"
+      },
+      "source": [
+        "# Write a program to shuffle the name\n",
+        "name=input('Enter your name: ')\n",
+        "name.split()\n",
+        "for i in range(0,len(name)):\n",
+        "  if name[i]==' ':\n",
+        "    index=i\n",
+        "print(name[index+1:],name[:index])\n"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter your name: Govind Sitaphale\n",
+            "Sitaphale Govind\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "IJIZASayCpEW"
+      },
+      "source": [
+        "---"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "5kBinzKxn3hd"
+      },
+      "source": [
+        "#### Activity 2: Alphabet Soup\n",
+        "\n",
+        "Create a function that accepts a string as parameter and prints the same string but with its letters arranged in alphabetical order.\n",
+        "\n",
+        "**Notes**:\n",
+        "\n",
+        "- Numbers and punctuation symbols won't be included in test cases.\n",
+        "\n",
+        "- We will deal with only single word.\n",
+        "\n",
+        "**Examples**:\n",
+        "```\n",
+        "1. hello ➞ ehllo\n",
+        "\n",
+        "2. hacker ➞ acehkr\n",
+        "\n",
+        "3. javascript ➞ aacijprstv\n",
+        "```\n",
+        "\n",
+        "Follow the steps given below to achieve the desired result:\n",
+        "\n",
+        "\n",
+        "- **Step 1**: Create a function that accepts a string as a parameter.\n",
+        " \n",
+        "- **Step 2**: Inside this function, initialize a variable to hold the final result.\n",
+        "\n",
+        "- **Step 3**: Convert your string to a list using `list()` function.\n",
+        "\n",
+        "- **Step 4**: Then apply the `sort()` function to sort the elements in the list alphabetically. The `sort()` function is used to sort the alphabets or numbers in ascending order by default. **Syntax**: `lst.sort()`, where `lst` is the list of elements to be sorted.\n",
+        " \n",
+        "- **Step 5**: Use the `join()` function to join the items contained in a list with the variable created in Step 2 to form a string."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "4gjDvOhzn6TL",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "799b917b-6e8c-427f-b02e-c7ab193f6ed8"
+      },
+      "source": [
+        "# Write your solution here\n",
+        "def alpha(input):\n",
+        "  op=''\n",
+        "  input=list(input)\n",
+        "  input.sort()\n",
+        "  x=op.join(input)\n",
+        "  print(x)\n",
+        "c=input()\n",
+        "alpha(c)"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "python\n",
+            "hnopty\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "yOJmEOqi-Zbr"
+      },
+      "source": [
+        "---"
+      ]
+    }
+  ]
+}
